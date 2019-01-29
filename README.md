@@ -18,9 +18,14 @@ cd Sphere-Tracer
 First, create a scene description (see below). Then generate the simulation with:
 
 ~~~~
+# Edit makefile first if on linux
 make
-create_simulation frames_per_second length_in_seconds scene_desc.txt
+chmod +x create_simulation
+./create_simulation frames_per_second length_in_seconds scene_desc.txt
 ~~~~
+
+On linux, you need to manually link the math library, so add the '-lm' flag to the commands in the makefile 
+before making.
 
 The simulation comes out as the file sim.avi. The ppm frame files are deleted when the program finishes.
 

@@ -5,11 +5,12 @@ A ray traced simulation program for making spheres bounce around in various ways
 # Install
 
 ~~~~
-# Clone the repo
-git clone https://github.com/mlevatich/Sphere-Tracer.git
-
 # Install ffmpeg (brew is easiest for mac)
 brew install ffmpeg
+
+# Clone the repo
+git clone https://github.com/mlevatich/Sphere-Tracer.git
+cd Sphere-Tracer
 ~~~~
 
 # Usage
@@ -25,7 +26,7 @@ The simulation comes out as the file sim.avi. The ppm frame files are deleted wh
 
 # Examples
 
-A sample scene description is given in examples/scene.txt.  The movie which that description generates is 
+A sample scene description is given in examples/sphere_party.txt. The movie which that description generates is 
 examples/sphere_party.avi. While it is only three seconds long due to the limitations of file sizes on github, 
 sphere_party.avi is a timeless work of art which showcases the many awesome features of my silly simulator.
 
@@ -57,7 +58,7 @@ Highly customizable scene description – scenes include:
          cannot have textures mapped onto them. Like spheres, they have a base color.
         -walls can be made invisible.
         
-    lights
+    Lights
     
         -lights are specified by a point and a color. While the code has the infrastructure for 
          spot lights and directional

@@ -1,6 +1,6 @@
 # Sphere-Tracer
 
-A ray traced simulation program for making spheres bounce around in various ways!
+Turn a plaintext scene description into a beautifully ray-traced sphere-filled movie!
 
 # Install
 

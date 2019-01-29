@@ -1,0 +1,115 @@
+VIDEO RESOLUTION
+
+/resolution 640 480
+
+CAMERA POSITION AND FOV
+
+/camera
+ /fov 40
+ /eye 0 -200 500
+ /to 0 0 0
+
+TEXTURES
+
+/texture
+ /type bump
+ /file textures/slime.bmp
+
+/texture
+ /type intensity
+ /file textures/brick.bmp
+
+SPHERES
+
+/sphere
+ /radius 50
+ /point -75 0 100
+ /velocity 120 0 -80
+ /color 136 255 136
+ /shading 0.9 0.0 0.1
+ /texture 0
+
+/sphere
+ /radius 25
+ /point 0 -25 0
+ /velocity 150 0 -150
+ /color 255 255 136
+ /shading 0.9 0.0 0.1
+ /texture 1
+
+/sphere
+ /radius 40
+ /point -100 0 0
+ /velocity -20 0 100
+ /color 136 136 255
+ /shading 0.9 0.0 0.1
+ /texture 1
+
+/sphere
+ /radius 32
+ /point 50 0 50
+ /velocity -40 -50 -75
+ /color 255 136 255
+ /shading 0.1 0.9 0.0
+ /texture -1
+
+LIGHTS
+
+/light
+ /type point
+ /point 100 -100 100
+ /velocity 0 0 0
+ /color 255 0 0
+
+/light
+ /type point
+ /point -100 -100 100
+ /velocity 0 0 0
+ /color 255 255 255
+
+WALLS
+
+/wall
+ /axis y
+ /base -200 100 -300
+ /width 400
+ /height 400
+ /color 221 221 221
+ /shading 0.99 0.0 0.0
+ /invisible no
+
+/wall
+ /axis z
+ /base -200 -100 -300
+ /width 400
+ /height 200
+ /color 221 221 221
+ /shading 0.1 0.9 0.0
+ /invisible no
+
+/wall
+ /axis z
+ /base -200 -100 100
+ /width 400
+ /height 200
+ /color 221 221 221
+ /shading 0.99 0.0 0.0
+ /invisible yes
+
+/wall
+ /axis x
+ /base -200 -100 -300
+ /width 400
+ /height 200
+ /color 200 200 255
+ /shading 0.99 0.0 0.0
+ /invisible no
+
+/wall
+ /axis x
+ /base 200 -100 -300
+ /width 400
+ /height 200
+ /color 255 200 200
+ /shading 0.99 0.0 0.0
+ /invisible no

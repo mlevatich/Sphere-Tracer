@@ -3,72 +3,72 @@ A ray traced simulation program for making spheres bounce around in various ways
 
 # Features
 
--Highly customizable scene description – scenes include:
+Highly customizable scene description – scenes include:
 
-    -spheres
+    spheres
     
-        -spheres come equipped with an initial position and velocity, and are affected by gravity.
+        spheres come equipped with an initial position and velocity, and are affected by gravity.
         
-        -a RGB color is specified for each sphere, in addition to the degree of diffuse, specular, and ambient
+        a RGB color is specified for each sphere, in addition to the degree of diffuse, specular, and ambient
          reflectance.
          
-        -spheres can have textures mapped onto them (see 'textures').
+        spheres can have textures mapped onto them (see 'textures').
         
-        -spheres collide with both walls and other spheres in realistic ways, conserving momentum upon collision with
-         spheres and losing a portion of kinetic energy upon collision with walls.  A sphere's mass is determined by
-         its radius, which is specified by the user.
+        spheres collide with both walls and other spheres in realistic ways, conserving momentum upon collision with
+        spheres and losing a portion of kinetic energy upon collision with walls.  A sphere's mass is determined by
+        its radius, which is specified by the user.
          
-        -spheres rotate pleasingly around their y axes.
+        spheres rotate pleasingly around their y axes.
         
-    -walls
+    walls
     
-        -walls are built from ray traced triangles and have rectangular dimensions.
+        walls are built from ray traced triangles and have rectangular dimensions.
         
-        -walls (or floors, as the case may be) are specified by their axis (a wall on the y axis is a floor/ceiling, etc),
-         a base coordinate, and a width and height.
+        walls (or floors, as the case may be) are specified by their axis (a wall on the y axis is a floor/ceiling, etc),
+        a base coordinate, and a width and height.
          
-        -spheres collide with all types of walls.
+        spheres collide with all types of walls.
         
-        -walls can be shaded like spheres, with diffuse, specular, and ambient reflectance, but cannot have textures
-         mapped onto them. Like spheres, they have a base color.
+        walls can be shaded like spheres, with diffuse, specular, and ambient reflectance, but cannot have textures
+        mapped onto them. Like spheres, they have a base color.
          
-        -walls can be made invisible.
+        walls can be made invisible.
         
-    -lights
+    lights
     
-        -lights are specified by a point and a color. While the code has the infrastructure for spot lights and directional
-         lights, only point lights are supported.
+        lights are specified by a point and a color. While the code has the infrastructure for spot lights and directional
+        lights, only point lights are supported.
          
-        -like spheres, lights can be given a velocity, so that they move across the screen in cool ways.
+        like spheres, lights can be given a velocity, so that they move across the screen in cool ways.
         
-    -textures
+    textures
     
-        -textures (bmp files, most conveniently 512x512), can be mapped onto spheres in one of three ways.
+        textures (bmp files, most conveniently 512x512), can be mapped onto spheres in one of three ways.
         
-        -a color-mapped texture will replace the color of a sphere completely with the texture, like wrapping paper.
+        a color-mapped texture will replace the color of a sphere completely with the texture, like wrapping paper.
         
-        -an intensity-mapped texture will modify the brightness of the sphere's color by the intensity of the texture
-         at a given point, preserving the sphere's color but giving it the texture.
+        an intensity-mapped texture will modify the brightness of the sphere's color by the intensity of the texture
+        at a given point, preserving the sphere's color but giving it the texture.
          
-        -a bump-mapped texture will modify the surface normal to give the sphere the appearance of bumpiness.
+        a bump-mapped texture will modify the surface normal to give the sphere the appearance of bumpiness.
         
-        -textures rotate with each frame, so that the spheres appear to be spinning!
+        textures rotate with each frame, so that the spheres appear to be spinning!
         
-    -camera
+    camera
     
-        -a field of view, eye point and to point can be specified for the camera.
+        a field of view, eye point and to point can be specified for the camera.
         
-        -while it is currently commented out in the code and the functionality can't be accessed from the scene description,
-         the camera can move! uncommenting the lines in sim.c will cause the camera to move in a circle. It's cool, but
-         a bit much.
+        while it is currently commented out in the code and the functionality can't be accessed from the scene description,
+        the camera can move! uncommenting the lines in sim.c will cause the camera to move in a circle. It's cool, but
+        a bit much.
 
--Additional technical details:
+Additional technical details:
 
-    -The frame rate and simulation length are specified on the command line.
+    The frame rate and simulation length are specified on the command line.
     
-    -Anti-aliasing is turned on by default in the code, but it can be toggled off by switching a boolean in scene.c
+    Anti-aliasing is turned on by default in the code, but it can be toggled off by switching a boolean in scene.c
     
-    -The image resolution is controlled through the scene description.
+    The image resolution is controlled through the scene description.
     
 # Install
 
